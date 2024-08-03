@@ -7,6 +7,7 @@ var is_transitioning: bool = false
 
 @onready var explosion_audio: AudioStreamPlayer = $ExplosionAudio
 @onready var success_audio: AudioStreamPlayer = $SuccessAudio
+@onready var rocket_audio: AudioStreamPlayer3D = $RocketAudio
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
