@@ -36,7 +36,6 @@ func _process(delta: float) -> void:
 		left_booster_particles.emitting = true
 	else:
 		left_booster_particles.emitting = false
-	
 
 func _on_body_entered(body: Node) -> void:
 	if is_transitioning == false:
