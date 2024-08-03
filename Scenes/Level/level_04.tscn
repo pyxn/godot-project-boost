@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Level/landing_pad.gd" id="1_vwbv8"]
 [ext_resource type="PackedScene" uid="uid://bd1e8by45hv8j" path="res://Scenes/player.tscn" id="2_27kfp"]
 [ext_resource type="PackedScene" uid="uid://chaxjy8i8vyld" path="res://Scenes/Obstacles/moving_hazard.tscn" id="3_qmmao"]
+[ext_resource type="PackedScene" uid="uid://br2snuskdpy2" path="res://Scenes/background.tscn" id="4_jqkgr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r1uda"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,9 +17,6 @@ background_mode = 2
 sky = SubResource("Sky_qu0ei")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sd044"]
-albedo_color = Color(0.571128, 0.41464, 0.331034, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txubh"]
 albedo_color = Color(0.241258, 0.616198, 0.954876, 1)
@@ -35,12 +33,6 @@ environment = SubResource("Environment_fwyc6")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Floor" type="CSGBox3D" parent="." groups=["Hazard"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
-use_collision = true
-size = Vector3(30, 8, 5)
-material = SubResource("StandardMaterial3D_sd044")
-
 [node name="LaunchPad" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.779, 0.2, 0)
 use_collision = true
@@ -56,7 +48,7 @@ script = ExtResource("1_vwbv8")
 file_path = "res://Scenes/Level/level_01.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, -0.02, 5.26, 8.45)
+transform = Transform3D(1, 0, 0, 0, 0.990268, 0.139173, 0, -0.139173, 0.990268, -0.02, 7, 10)
 current = true
 
 [node name="Player" parent="." instance=ExtResource("2_27kfp")]
@@ -65,3 +57,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.779, 1.33988, 0)
 [node name="MovingHazard" parent="." instance=ExtResource("3_qmmao")]
 destination = Vector3(0, 2, 0)
 duration = 3.0
+
+[node name="Floor" parent="." instance=ExtResource("4_jqkgr")]
