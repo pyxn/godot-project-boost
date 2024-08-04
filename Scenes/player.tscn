@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://bf4jtrxiu2y2" path="res://SFX/SFX - Success.ogg" id="3_fqj4o"]
 [ext_resource type="AudioStream" uid="uid://b143ppijxy6q2" path="res://SFX/SFX - Main engine thrust.ogg" id="4_87aay"]
 [ext_resource type="PackedScene" uid="uid://ux6ivcx1ovdp" path="res://Scenes/Particles/booster_particles.tscn" id="5_8l0xx"]
-[ext_resource type="PackedScene" path="res://Scenes/Particles/explosion_particles.tscn" id="6_g7xv7"]
-[ext_resource type="PackedScene" path="res://Scenes/Particles/success_particles.tscn" id="7_tkcr6"]
+[ext_resource type="PackedScene" uid="uid://dcecb8hw7dbrv" path="res://Scenes/Particles/explosion_particles.tscn" id="6_g7xv7"]
+[ext_resource type="PackedScene" uid="uid://jfwajmrh6ca7" path="res://Scenes/Particles/success_particles.tscn" id="7_tkcr6"]
 [ext_resource type="Material" uid="uid://cg1gbgwf8ctk8" path="res://Materials/ship_red_material.tres" id="8_iadma"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4528o"]

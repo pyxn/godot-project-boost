@@ -16,6 +16,7 @@ var is_transitioning: bool = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if Input.is_action_pressed("boost"):
 		apply_central_force(basis.y * delta * thrust)
 		booster_particles.emitting = true
@@ -36,6 +37,10 @@ func _process(delta: float) -> void:
 		left_booster_particles.emitting = true
 	else:
 		left_booster_particles.emitting = false
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
+		
 
 func _on_body_entered(body: Node) -> void:
 	if is_transitioning == false:
